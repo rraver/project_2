@@ -1,0 +1,171 @@
+#bodyColor {
+	background-color: #FFFFFF;
+}
+/*Styles the top nav-bar behind the logo*/
+#navcolor {
+	background-color: #BCC7CD;
+	padding: 10px; 
+}
+/*Styles the logo on the page */
+.sidehustle {
+	margin-left: 5%;
+	font-family: 'Abril Fatface', cursive;
+	font-size: 40px; 
+	color: #01278e;
+}
+
+.row {
+	padding-top:10px; 
+	padding-bottom: 0px; 
+}
+
+#hr {
+	border-top: 2px solid #c5cbd6;
+}
+
+/*Styles the footer nav bar*/
+#footer {
+	border-top: 20px solid grey;
+	background-color: #BCC7CD;
+	height: 90px;
+}
+
+ul {
+	clear: both;
+	list-style: none;
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	top: 10px;
+	width: 35%;
+}
+
+ul li {
+	display: inline;
+	padding: 0px 10px 0px 10px;
+}
+
+/* Styles the links in the footer of the page */
+ul li a {
+	text-decoration: none;
+	font-family: 'Abril Fatface', cursive;
+	color: #01278e;
+	font-size: 15px;
+}
+
+/* Sets the pencil image size for create issues icon */
+#pencilsize {
+	size: 200px;
+}
+
+
+.blue {
+	text-align: center;
+	color: #01278e;
+}
+
+.grey {
+	background-color: #e0e2e5;
+}
+
+#dropdown {
+	float:right;
+	margin-right: 5%;
+} 
+
+#arrowsize {
+	height: 40px;
+	width: 40px;
+}
+
+/*styles the "create issues" icon */
+#issue {
+	padding: 40px;
+	margin: -20px; 
+	margin-left: -25px;
+    margin-right: -25px;
+}
+
+/*Styles the "creat project" icon */
+#projects {
+	padding: 40px;
+	margin: -20px; 
+	margin-left: -25px;
+    margin-right: -25px;
+}
+
+/*Styles the "analytics" icon */
+#analytics {
+	padding: 40px;
+	margin: -20px; 
+	margin-left: -25px;
+    margin-right: -25px;
+}
+
+#plus_signEpic{
+	font-size: 40px; 
+}
+
+#plus_signStory {
+	font-size: 40px; 
+}
+
+#plus_signtask {
+	font-size: 40px; 
+}
+
+#plus_signSubtask1 {
+	font-size: 40px; 
+}
+
+#plus_signSubtask2 {
+	font-size: 40px; 
+}
+
+#project_button {
+	float: right;
+    clear: both;
+    margin-top: -50px;
+    margin-right: 30px;
+}
+#story {
+	margin-left: 80px;
+}
+
+#sub_task1 {
+	margin-left: 170px;
+}
+
+#sub_task2 {
+	margin-left: 80px;
+}
+
+#submit_button {
+	float: right; 
+	clear: both;
+	padding-top: 200px; 
+	padding-right: -10px; 
+}
+
+#selection_row {
+	padding-top: 150px; 
+}
+
+#login_row {
+	padding-top: 130px; 
+}
+
+#login_submitbtn {
+	padding-top: 10px;
+	float: right; 
+	clear: both; 
+}
+
+#login_form {
+	padding-bottom: 50px;
+}
+
+#dropdown_menu {
+	padding: 20px;
+    font-size: 15px;
+}

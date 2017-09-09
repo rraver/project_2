@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create Issues</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+</head>
+<body id = "bodyColor">
+	
+<form action="/submitIssue" method="POST">  
+        
+<!--create a navigation bar-->
+<nav id = "navcolor" class="navbar navbar-default">
+    <h3 class = "sidehustle">SideHustle</h3>
+    <div id = "dropdown" class="dropdown"> 
+      <button name="project_button" class="btn btn-secondary dropdown-toggle" type="button" id="project_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Project
+      </button>
+      <input name = "project_selection" id="project_selection" type="hidden" value="asdfsdf">
+     <div id = "dropdown_menu" class="dropdown-menu" aria-labelledby="dropdownMenu2"> 
+          <p class ='dropdown-item' value = "Rob's Project" type = 'button'>Rob's Project</p>
+          <p class ='dropdown-item' value = "Charlie's Angels Project" type = 'button'>Charlie's Angels</p>
+          <p class ='dropdown-item' value = "JP's awesome project" type = 'button'>JP's awesome project</p> 
+          <p class ='dropdown-item' value = "Limor's project" type = 'button'>Limor's project</p> 
+      </div> 
+    </div> 
+</nav>
+
+<div id = "form_inputs" class = "container">
+    
+    <!-- Creates the input field to create an Epic --> 
+    <div class = "row">
+      <div class = "col-sm-6" id="epic" class="form-group has-success has-feedback">
+         <input name = "epic" type="text" class="form-control" aria-describedby="inputSuccess2Status" placeholder="Create an Epic">
+      </div>  
+      <div class = "col-sm-2" >
+        <span id = "plus_signEpic" class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+      </div>
+    </div>   
+
+    <!-- Creates the input field to create a Story --> 
+    <div class = "row">
+      <div class = "col-sm-6" id="story" class="form-group has-success has-feedback">
+          <input name ="story" type="text" class="form-control" aria-describedby="inputSuccess2Status" placeholder="Create a Story">
+      </div> 
+      <div class = "col-sm-2">
+          <span id = "plus_signStory" class="glyphicon glyphicon-plus-sign in-line" aria-hidden="true"></span>
+      </div> 
+    </div>
+
+    <!-- Creates the input field to create a Subtask --> 
+    <div class = "row">
+      <div class = "col-sm-6" id = "sub_task1" class="form-group has-success has-feedback">
+          <input name = "sub_task1"  type="text" class="form-control" aria-describedby="inputSuccess2Status" placeholder="Create a Subtask">
+      </div>
+      <div class = "col-sm-2">
+          <span id = "plus_signSubtask1" class="glyphicon glyphicon-plus-sign in line" aria-hidden="true"></span>
+      </div>
+    </div> 
+
+    <br>
+    <br>
+
+    <!-- Creates the input field to create a Task --> 
+    <div class = "row">
+      <div class = "col-sm-6" id = "task" class="form-group has-success has-feedback">
+          <input name = "task" type="text" class="form-control" aria-describedby="inputSuccess2Status" placeholder="Create a Task">
+      </div>
+      <div class = "col-sm-2">
+          <span id = "plus_signtask" class="glyphicon glyphicon-plus-sign in line" aria-hidden="true"></span>
+      </div>
+    </div> 
+
+    <!-- Creates the input field to create a Subtask --> 
+    <div class = "row">
+      <div class = "col-sm-6" id = "sub_task2"  class="form-group has-success has-feedback">
+          <input name = "sub_task2" type="text" class="form-control" aria-describedby="inputSuccess2Status" placeholder="Create a Subtask">
+      </div>
+      <div class = "col-sm-2">
+          <span id = "plus_signSubtask2" class="glyphicon glyphicon-plus-sign in line" aria-hidden="true"></span>
+      </div>
+    </div> 
+
+     <!-- Creates a submit button --> 
+    <div id = "submit_button">
+      <button  class="btn btn-default" type="submit">Submit</button>
+    </div> 
+</form>
+</div><!--closes container-->
+
+  <!-- Creates the footer for the page --> 
+  <div id = "footer" class = "navbar navbar-default navbar-fixed-bottom">
+        <ul class = "navi-button">
+          <li><a href = "privacy.html">Privacy Policy</a></li>
+          <li><a href = "term.html">Terms of Use</a></li>
+          <li><a href = "term.html">Copyright 2007  SideHustle</a></li>
+      </ul>
+  </div><!--closes footer-->
+
+
+  </body>
+
+
+  <script>
+
+  //When a user clicks a project
+  $(".dropdown-item").on("click", function() {
+
+  //get value of button clicked and assign to variable
+  btnValue = ($(this).attr("value"));
+  console.log(btnValue);
+  $("#project_button").text(btnValue);
+  $("#project_selection").attr("value",btnValue);
+});
+
+  // When user clicks add-btn on "Create Epic"
+  $("#plus_signEpic").on("click", function(event) {
+  event.preventDefault();
+
+  console.log ("epic onclick working");
+      /* Generates a new "block of options - A create epic, create story and create subtask input field to populate
+          directly below inital block of options present on page load */
+      // Creates a new div 
+      var newEpic = $("<div>");
+      // Adds a class 
+      //epic.addClass(".row");
+      // Dynamically creates input fields to mirror inital block of options while maintaing the users input
+      epic.append("<input>" + ">"); //Not sure what would go in between these tags 
+      epic.append("<input>" + ">");
+      epic.append("<input>" + ">");
+      newEpic.appendChild(newEpic);
+  });
+  
+
+  // When user clicks add-btn on "Create Story"
+ $("#plus_signStory").on("click", function(event) {
+  event.preventDefault();
+  
+  console.log("story on click working");
+      // Generates a new "create story" input field that populates directly below "fixed" create story input field
+      var story = $("<input>");
+      //story.addClass("");
+      story.type = "text";
+      story_div.appendChild(story);
+
+  });
+
+  // When user clicks add-btn on "Create Subtask"
+ $("#plus_signSubtask").on("click", function(event) {
+  event.preventDefault();
+  
+  console.log("subtask on click working");
+      // Generates a new "sub task" input field that populates directly below "fixed" create subtask input field 
+      var story = $("<input>");
+      //story.addClass("");
+      story.type = "text";
+      subtask_div.appendChild(story);
+
+  });
+
+  // Empty each input box by replacing the value with an empty string
+  $("#epic").val("");
+  $("#story").val("");
+  $("#sub_Task").val("");
+
+  </script>
+</html>
